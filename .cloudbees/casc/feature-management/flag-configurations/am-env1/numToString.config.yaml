@@ -1,0 +1,21 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: numToString
+
+enabled: false
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  - percentage: 25
+    option: "123.34"
+  - percentage: 25
+    option: "100040005000.15234"
+  - percentage: 25
+    option: "1.0004000500015234e+11"
+  - percentage: 25
+    option: q123b
+
+conditions: []

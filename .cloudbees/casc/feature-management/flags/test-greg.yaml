@@ -1,0 +1,12 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: test-greg
+flagType: boolean
+description: dummy desc
+labels:
+
+availableValues:
+
+isPermanent: false

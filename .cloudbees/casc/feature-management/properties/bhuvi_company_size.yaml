@@ -1,0 +1,7 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-properties
+
+name: bhuvi_company_size
+type: String
+description: 'Company size classification: small, medium, enterprise'

@@ -1,0 +1,19 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: f1
+
+enabled: false
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  valueWrittenInCode: true
+
+conditions:
+  - allOf:
+      - anyOf:
+          - group:
+              name: AutoTest.752cb865-ffe0-48a9-9c58-debb749148e6.TargetGroup
+    flagValue: false

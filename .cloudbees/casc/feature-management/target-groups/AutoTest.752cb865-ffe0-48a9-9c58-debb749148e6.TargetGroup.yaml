@@ -1,0 +1,13 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: target-group
+
+name: AutoTest.752cb865-ffe0-48a9-9c58-debb749148e6.TargetGroup
+
+description: q1
+
+conditions:
+  allOf:
+    - property:
+        name: number-property
+        operator: is-undefined

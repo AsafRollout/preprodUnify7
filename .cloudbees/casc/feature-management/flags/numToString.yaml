@@ -1,0 +1,19 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: numToString
+flagType: string
+description: ""
+labels:
+  - aaaaaaaaaaaaaaaaaa
+
+availableValues:
+  - "1234567890"
+  - "987654321"
+  - "123.34"
+  - "100040005000.15234"
+  - "1.0004000500015234e+11"
+  - q123b
+
+isPermanent: false

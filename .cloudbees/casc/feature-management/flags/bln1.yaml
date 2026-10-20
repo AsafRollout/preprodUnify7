@@ -1,0 +1,16 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: bln1
+flagType: boolean
+description: ""
+labels:
+  - blOps
+  - gregLabel
+
+availableValues:
+  - "true"
+  - "false"
+
+isPermanent: false

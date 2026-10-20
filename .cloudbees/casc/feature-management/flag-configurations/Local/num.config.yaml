@@ -1,0 +1,24 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: num
+
+enabled: false
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  - percentage: 34
+    option: 1
+  - percentage: 33
+    option: 2
+  - percentage: 33
+    option: 3
+
+conditions:
+  - allOf:
+      - anyOf:
+          - group:
+              name: tgSavedFromCondition
+    flagValue: 3

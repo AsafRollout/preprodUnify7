@@ -1,0 +1,21 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: stringFlag
+flagType: string
+description: ""
+labels:
+
+availableValues:
+  - newVal3
+  - 'US   '
+  - newVal2
+  - new string val
+  - newStringVal
+  - vvsd
+  - new string val 2
+  - asdasd
+  - 'US     '
+
+isPermanent: false

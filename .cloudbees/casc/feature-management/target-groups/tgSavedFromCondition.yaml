@@ -1,0 +1,19 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: target-group
+
+name: tgSavedFromCondition
+
+description: vqvever
+
+conditions:
+  allOf:
+    - property:
+        name: rox.screen_width
+        operator: lt
+        operands:
+            - 3
+    - not:
+        allOf:
+            - group:
+                name: Beta Testers

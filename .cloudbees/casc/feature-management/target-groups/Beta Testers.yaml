@@ -1,0 +1,13 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: target-group
+
+name: Beta Testers
+
+description: Users enrolled in beta program
+
+conditions:
+  allOf:
+    - property:
+        name: betaEnrolled
+        operator: is-true

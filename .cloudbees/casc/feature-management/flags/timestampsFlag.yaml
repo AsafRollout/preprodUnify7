@@ -1,0 +1,15 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag
+
+flag: timestampsFlag
+flagType: boolean
+description: testing updated
+labels:
+  - label1
+
+availableValues:
+  - "true"
+  - "false"
+
+isPermanent: false

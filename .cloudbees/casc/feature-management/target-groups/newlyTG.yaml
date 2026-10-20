@@ -1,0 +1,25 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: target-group
+
+name: newlyTG
+
+description: bla bla bla
+
+conditions:
+  allOf:
+    - property:
+        name: rox.platform
+        operator: ne
+        operands:
+            - "3"
+    - property:
+        name: rox.now
+        operator: is-undefined
+    - property:
+        name: rox.language
+        operator: in-array
+        operands:
+            - abc
+            - def
+            - ghi

@@ -1,0 +1,51 @@
+---
+apiVersion: featuremanagement.cloudbees.io/v1alpha1
+kind: flag-configuration
+
+flag: numToString
+
+enabled: false
+
+stickinessProperty: rox.distinct_id
+
+defaultValue:
+  - percentage: 17
+    option: "1234567890"
+  - percentage: 17
+    option: "987654321"
+  - percentage: 17
+    option: "123.34"
+  - percentage: 17
+    option: "100040005000.15234"
+  - percentage: 15
+    option: "1.0004000500015234e+11"
+  - percentage: 17
+    option: q123b
+
+conditions:
+  - allOf:
+      - property:
+          name: rox.screen_width
+          operator: lt
+          operands:
+            - 2
+    flagValue: "987654321"
+  - allOf:
+      - anyOf:
+          - group:
+              name: AI test
+          - group:
+              name: Beta Testers
+          - group:
+              name: Target-number
+          - group:
+              name: tg12
+      - property:
+          name: rox.language
+          operator: in-array
+          operands:
+            - a
+            - c
+            - d
+    flagValue:
+      valueWrittenInCode: true
